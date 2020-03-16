@@ -6,7 +6,8 @@ text-decoration: none;
 box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    background: wheat;
 }
 #nav{
     background: gray;
@@ -28,4 +29,32 @@ body{
     color: white;
     font-size: 17px;
     text-transform: uppercase;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    float: left;
+}
+#name{
+    height: 400px;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 2px solid black;
+}
+#list{
+    margin: 20px;
+    padding: 20px;
+    border: greenyellow;
+}
+#discription{
+    padding: 100px;
+    margin-left: 300px;
+}
+
+/* contact */
+.form > p{
+    float: right;
 }
