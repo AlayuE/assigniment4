@@ -6,8 +6,8 @@ text-decoration: none;
 box-sizing: border-box;
 }
 body{
-    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
-    background: white;
+    font-family: 'Times New Roman', Times, serif;
+    background: gray;
 }
 #nav{
     background: black;
@@ -52,9 +52,31 @@ body{
     padding: 20px;
     border: greenyellow;
 }
+#list1{
+    margin: 20px;
+    padding: 20px;
+    border: greenyellow;
+}
 #discription{
     padding: 100px;
     margin-left: 300px;
+}
+#work{
+    margin: 20px;
+}
+}
+#skills{
+    margin: 20px;
+    width: 100%;
+    height: 100px;
+}
+#skillstopic{
+    width: 50%;
+    float: left;
+}
+#skillsstar{
+    width: 50%;
+    float: left;
 }
 
 /* contact */
@@ -117,9 +139,8 @@ height: 60px;
     font-size: 15px;
 }
 img{
-    /* width: 400px;
+    width: 400px;
     height: 400px;
-    border-radius: 100%; */
     float: left;
 }
 #clear{
@@ -147,6 +168,7 @@ img{
 }
 h1{
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* tic toc toe */
@@ -213,6 +235,114 @@ h1{
 #flags{
     margin: 20px;
 }
+#greece{
+    width: 600px;
+    height: 300px;
+}
+#grtop{
+    width: 600px;
+    height: 166.666667px;
+    background: red;
+}
+#grleft{
+    width: 200px;
+    height: 166.666667px;
+    background: white;
+    float: left;
+}
+#grleft1{
+    width: 200px;
+}
+#grleft11{
+    width: 70px;
+    height: 70px;
+    background: blue;
+    float: left;
+}
+#grleft12{
+    width: 70px;
+    height: 70px;
+    background: blue;
+    float: right;
+}
+
+#grleft2{
+    width: 200px;
+    height: 100px;
+    background: white;
+}
+#grleft3{
+    width: 200px;
+    height: 55.5555557px;
+    background: white;
+}
+#grleft31{
+    width: 70px;
+    height: 67px;
+    background: blue;
+    float: left;
+}
+#grleft32{
+    width: 70px;
+    height: 67px;
+    background: blue;
+    float: right;
+}
+#grright{
+    width: 400px;
+    height: 166.666667px;
+    float: left;
+}
+#grright1{
+    width: 400px;
+    height: 33.3333334px;
+    background: blue;
+}
+#grright2{
+    width: 400px;
+    height: 33.3333334px;
+    background: white;
+}
+#grright3{
+    width: 400px;
+    height: 33.3333334px;
+    background: blue;
+}
+#grright4{
+    width: 400px;
+    height: 33.3333334px;
+    background: white;
+}
+#grright5{
+    width: 400px;
+    height: 33.3333334px;
+    background: blue;
+}
+#grbot{
+    width: 600px;
+    height: 133.333333px;
+    background: blue ;
+}
+#grbot1{
+    width: 600px;
+    height: 33.3333332px;
+    background: white;
+}
+#grbot2{
+    width: 600px;
+    height: 33.3333332px;;
+    background: blue;
+}
+#grbot3{
+    width: 600px;
+    height: 33.3333332px;;
+    background: white;
+}
+#grbot4{
+    width: 600px;
+    height: 33.3333332px;;
+    background: blue;
+}
 #SierraLeone{
     height: 300px;
     width: 600px;
@@ -221,22 +351,220 @@ h1{
     border-bottom: 100px solid  #427bf5;
     
 }
-#finland{
+#denmark{
     height:300px;
     width: 600px;
-    background: ;
+    background:red ;
 }
-#germany{
-    height:300px;
+#uper{
     width: 600px;
-    background: red ;
-    border-top: 100px solid black;
-    border-bottom: 100px solid  yellow;
+    height: 100px;
+    background: red;
 }
-#belgium{
+#top1{
+    width: 200px;
+    height: 100px;
+    background: red;
+    float: left;
+}
+#top2{
+    width: 100px;
+    height: 100px;
+    background: white;
+    float: left;
+}
+#top3{
+    width: 300px;
+    height: 100px;
+    background: red;
+    float: left;
+}
+#midl{
+    width: 600px;
+    height: 100px;
+    background:white;
+}
+#bot{
+    width: 600px;
+    height: 100px;
+    background: red;
+}
+#top4{
+    width: 200px;
+    height: 100px;
+    background: red;
+    float: left;
+}
+#top5{
+    width: 100px;
+    height: 100px;
+    background: white;
+    float: left;
+}
+#top6{
+    width: 300px;
+    height: 100px;
+    background: red;
+    float: left;
+}
+#ghana{
+   width: 600px;
+   height: 300px;
+}
+#ghtop{
+    width: 600px;
+    height: 100px;
+    background:red ;
+}
+#ghmid{
+    width: 600px;
+    height: 100px;
+    background: yellow ;
+}
+#star5{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 100px;
+    border-color: transparent transparent black transparent;
+    }
+    #star5 {
+    margin: 0px 160px;
+    position: relative;
+    display: block;
+    color: black;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid black;
+    border-left: 100px solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    }
+    #star5:before {
+    border-bottom: 80px solid black;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+     
+    }
+    #star5:after {
+    position: absolute;
+    display: block;
+    color: black;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid black;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+    content: '';
+    }
+#ghbot{
+    width: 600px;
+    height: 100px;
+    background: green ;
+}
+
+#guineabessau{
     height:300px;
     width: 600px;
-    background: ;
+}
+#gleft{
+    width: 200px;
+    height: 300px;
+    background: red;
+    float: left;
+}
+#star1{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 100px;
+    border-color: transparent transparent black transparent;
+    }
+    #star1 {
+    margin: 100px 40px;
+    position: relative;
+    display: block;
+    color: black;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid black;
+    border-left: 100px solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    }
+    #star1:before {
+    border-bottom: 80px solid black;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+     
+    }
+    #star1:after {
+    position: absolute;
+    display: block;
+    color: black;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid black;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+    content: '';
+    }
+
+#gright{
+    width: 400px;
+    height: 300px;
+    float: left;
+}
+#gtop{
+    width: 400px;
+    height: 150px;
+    background: yellow;
+}
+
+#gbot{
+    width: 400px;
+    height: 150px;
+    background: green;
 }
 #benin{
     height:300px;
@@ -246,3 +574,355 @@ h1{
     border-right: 200px solid red ;
 
 }
+#somalia{
+    height:300px;
+    width: 600px;
+    background: #34cceb;
+    overflow: hidden;    
+}
+
+}
+#star{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 100px;
+    border-color: transparent transparent white transparent;
+    }
+    #star {
+    margin: 115px 180px;
+    position: relative;
+    display: block;
+    color: white;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    }
+    #star:before {
+    border-bottom: 80px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+     
+    }
+    #star:after {
+    position: absolute;
+    display: block;
+    color: white;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+    content: '';
+    }
+#kuwait{
+    height:300px;
+    width: 600px;
+}
+#trapezium {
+    border-bottom: 300px solid black;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    height: 0;
+    width: 300px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    content:"";
+    float: left;
+  } 
+#ktop{
+    width: 600px;
+    height: 100px;
+    background: green;
+}
+#kmid{
+    width: 600px;
+    height: 100px;
+    background: white;
+}
+#kbot{
+    width: 600px;
+    height: 100px;
+    background: red;
+}
+
+#japan{
+    height:300px;
+    width: 600px;
+    background: white;
+    overflow: hidden;
+}
+#japan #circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background: red;
+    margin: 70px 210px;
+
+}
+#aemirates{
+    height:300px;
+    width: 600px;
+}
+#aeleft{
+    width: 200px;
+    height: 300px;
+    background: red;
+    float: left;
+}
+#aeright{
+    width: 400px;
+    height: 300px;
+    float: left;
+}
+#aetop{
+    width: 400px;
+    height: 100px;
+    background:green ;
+}
+#aemid{
+    width: 400px;
+    height: 100px;
+    background: white;
+}
+#aebot{
+    width: 400px;
+    height: 100px;
+    background: black;
+}
+#chili{
+    height:300px;
+    width: 600px;
+}
+#ctop{
+    width: 600px;
+    height: 150px;
+}
+
+#cleft{
+    width: 200px;
+    height: 150px;
+    background: blue;
+    float: left;
+    overflow: hidden;
+}
+#star4{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 100px;
+    border-color: transparent transparent white transparent;
+    }
+    #star4{
+    margin: 50px 20px;
+    position: relative;
+    display: block;
+    color: white;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    }
+    #star4:before {
+    border-bottom: 80px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+     
+    }
+    #star4:after {
+    position: absolute;
+    display: block;
+    color: white;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+    content: '';
+    }
+#cright{
+    width: 400px;
+    height: 150px;
+    background: white;
+    float: left;
+}
+#cbot{
+    width: 600px;
+    height: 150px;
+    background: red;
+}
+#belgium{
+    height:300px;
+    width: 600px;
+    background: ;
+}
+#belgium{
+    height:300px;
+    width: 600px;
+    background: ;
+}
+#belgium{
+    height:300px;
+    width: 600px;
+    background: ;
+}
+#belgium{
+    height:300px;
+    width: 600px;
+    background: ;
+}
+#turkey{
+    height:300px;
+    width: 600px;
+    background:red;
+}
+#tleft{
+    overflow: hidden;
+}
+#moon{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: -23px 20px white;
+    position: relative;
+    top: 60px;
+    left: 80px;
+    float: left;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(400deg);
+    -o-transform: rotate(40deg);
+    content: '';
+
+}
+#star2{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 100px;
+    border-color: transparent transparent white transparent;
+    }
+    #star2 {
+    margin: 115px 180px;
+    position: relative;
+    display: block;
+    color: white;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    }
+    #star2:before {
+    border-bottom: 80px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+     
+    }
+    #star2:after {
+    position: absolute;
+    display: block;
+    color: white;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+    content: '';
+    }
+    #bahamas{
+        width: 600px;
+        height: 300px;
+        background: steelblue;
+    }
+    #btop{
+        width: 600px;
+        height: 100px;
+        background: steelblue;
+    }
+    #bmid{
+        width: 600px;
+        height: 100px;
+        background: yellow;
+    }
+    #bbot{
+        width: 600px;
+        height: 100px;
+        background: steelblue;
+    }
+    #triangle1 {
+        width: 0;
+        height: 0;
+        border-left: 300px solid red;
+        border-top: 150px solid transparent;
+        border-bottom: 150px solid transparent;
+        float: left;
+      }
