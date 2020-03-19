@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./image/link.jpg">
     <title>Blogs</title>
     <!-- <style>/* This is internal style */
@@ -17,317 +17,137 @@
         
 </head>
 <body>
-    <!-- inlile style <p style="color: red;">This is styling</p>
-    <p>This is style2</p>
-    <p>This is style3</p> -->
-    <header>
-        <nav>
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="contact.html">Contact</a></li>
-                <li> <a href="Gallary.html.html">Gallary</a></li>
-                <li> <a href="blogs.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-    <dir id="cont">
+    <nav id="nav">
+        <ul>
+
+         <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="gallary.html">gallary</a></li>
+        <li><a href="blogs.html">blogs</a></li>
+        <li><a href="myworks.html">my work</a></li>
+
+        </ul>
+    </nav>
+  
+    <div id="cont">
         <!--  -->
-        <section>
-        <p class="title">First post</p>
+        <section class="question">
+        <p class="title">Effect of using relative sizes on styling the size of an element</p>
         <article>
             <p>
-                Relative units
-                What is vw and vh?
-                vw stands for viewport width and vh means viewport height. If you set these to 1, it means it will be 1/100th the height or width 
-                of the viewport. The viewport is that part of your web page that is currently visible in the window. If you want your header element
-                 to have the exact height of the viewport, you can set it like this.
-                
-                header { 
-                    height: 100vh; 
-                }
-                Regardless of your display or whether you’re viewing it full screen or not, your header will always take up 100% of the height 
-                of the visible screen. The same goes for vw.
-                
-                What is ch?
-                ch stands for characters. This unit is a little bit different than you would expect. If you set the width of your paragraph to 60ch, 
-                it doesn’t mean there will be 60 characters on this line. This is because ch looks at the width of the 0 (zero) in your font. In most fonts, 
-                he character i will be smaller than a 0. When would you use ch? You could use it if you want to keep your text at a readable width.
-                 Most research suggests for the best readability of your site, you want one line to contain 50 - 75 characters.
-                
-                What is em?
-                em is relative to the font-size of your current element. If you have an element with a computed font-size of 16px, 1em will also be 16px. 
-                If you increase this to 20px, 1em will also be 20px. Remember the cascade here. If your current element doesn't have a font size defined, 
-                but the parent does, this will be used as the relative size for an em.
-                
-                Why am I still doing the math to get pixels? Because this is what your browser does. If you look in the inspector in your browser developer
-                 tools, the CSS rule will show your relative em unit, but the computed value will be pixels.
-                
-                What is rem?
-                rem stands for root em. It's pretty much the same as em, except it will always be relative to the default font size instead of the current 
-                element's font size. This can either be the default font size of the browser, usually 16px, or one you can set it in your CSS like this.
-                
-                html {
-                    font-size: 1em;
-                }
-                or:
-                
-                :root {
-                    font-size: 1em;
-                }
-                You probably noticed I didn’t use rem here. That isn’t necessary, because we’re already at the root. rem and em are exactly the same here.
-                
-                You can use both :root and html. :root refers to the html tag, but it's specifity is higher.
-                
-                When to use which unit?
-                I prefer to use rem for font-sizes, em for margins and paddings and px for borders. I still use pixels when it comes to borders, 
-                because I usually want a border to be just a fine, 1px line.
-                
-                By using em for margins and paddings, they will increase when you increase the font size of your element: perfect responsiveness. 
-                Most times, a font size on a smartphone can be smaller than on a larger display. If you set a higher root size for the latter, 
-                everything will scale proportionally. More about this responsive magic in a bit.
-                
-                Why use relative units?
-                There are a couple of reasons to use this pattern. Of course you can set everything in pixels, but if you want to make something responsive,
-                 you usually need to overwrite more values. And another, maybe more important, reason: some people will have their browser font size set to 
-                 something else than the default 16px, for example people who are visually impaired.
-                
-                If you set a higher default font size, you wouldn't have to zoom in the browser to be able to read a website, because the content of a 
-                website with relative units would increase with your preferred font size.
-                
-                What to do with pixel perfect?
-                There are some designers or customers who want a pixel perfect website, while you want to use relative units. Luckily there's an easier way
-                 than having to do math for every size you set. What often happens is setting the root to 10px and then defining a font size of 1.6rem for 
-                 16px. I wouldn't suggest on following this pattern, because you’ll be overwriting a possible higher default size of your visitor.
-                
-                If you use sass in your project, you can use a function to convert pixels to rem. If you want to use em, you can replace rem with em in 
-                this 
-                function.
-                
-                $baseFontSize : 16;
-                @function rem($pixels, $context: $baseFontSize) {
-                    @return $pixels / $context * 1rem;
-                }
-                You can then set your font size like this:
-                
-                p {
-                    font-size: rem(32);
-                }
-                The font-size in your stylesheet output will be set to 2rem, while you can easily use the exact font sizes the designer or customer wants.
-                
-                If you're not using a preprocessor, you can also use calc for this.
-                
-                h2 {
-                    font-size: calc(32 / 16 * 1rem);
-                }
-                Responsive magic
-                If you combine the relative units of em and rem, you can reach almost perfect responsiveness, with a couple of lines of code.
-                
-                Set the default font sizes
-                First, you set a default font size and you define the media queries you need. Ideally, you’d use breakpoints when your layout breaks instead
-                 of 
-                targeting devices (because nowadays there are just way too many device sizes). The units used in this example are from a project I worked on
-                 and have no specific meaning outside of that project.
-                
-                :root {
-                    font-size: 0.75em;
-                }
-                
-                @media(min-width: 48em) {
-                    :root {
-                        font-size: 0.875em;
-                    }
-                }
-                
-                @media(min-width: 75em) {
-                    :root {
-                        font-size: 1em;
-                    }
-                }
-                Style your elements
-                Let’s say you have an aside element in your website with a background color and padding that you want to scale proportionally.
-                
-                aside {
-                    background-color: #FAA275;
-                    padding: 1em;
-                }
-                On the smallest breakpoint, your padding will be the equivalent of 12px, while on the largest breakpoint, it will evaluate in your 
-                browser to 16px.
-                
-                Scale some more
-                And let’s say you have this aside somewhere else on your website where you want it to be larger. You’ll only have to define the font-size
-                 again and both the font size and the padding of your element will scale accordingly.
-                
-                aside.larger {
-                    font-size: 1.5em;
-                }
-                And there it is: responsive magic. With this pattern you can easily increase or decrease your font sizes or elements, with just a couple of 
-                lines of code.
+            Yes, it does matter.
+            
+            Using dimensions in % or em. Just change the base font size, and everything will change. em is a scalable unit. 
+            An em is equal to the current font-size, for instance,if the font-size of the document is 12 pt, 1 em is equal to 12 pt. Ems are 
+            scalable in nature,  so 2 em would equal 24 pt,.5 em would equal 6 pt, etc.. Percent (%): The percent unit is much like the 
+            “em” unit, save for a few fundamental differences.First and foremost, the current font-size is equal to 100% (i.e. 12 pt = 100%).
+            While using the percent unit, the text remains fully scalable for mobile devices and for accessibility.</p>
+            <p>   
+            rem stands for root em. It's pretty much the same as em, except it will always be relative to the default font size instead of
+            the current element's font size. This can either be the default font size of the browser, usually 16px, or one you can set it in 
+            your CSS I prefer to use rem for font-sizes, em for margins and paddings and absolute units for borders. 
+            </p>
+                               
             </p>
         </article>
-        <p class="date">march,20,2020 8:00 pm</p>
+        <p class="date">march,18,2020 10:03 am</p>
         </section>
         <!-- second post -->
-        <section>
-            <p class="title">second post</p>
-            <article>
-                <p>
-                    <p>CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of new features
-                        and additions, like rounded corners,
-                        shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.</p>
-                        Now let’s have a look at what’s new!
-               #1. CSS3 Selectors
-               Selectors are at the heart of CSS. Originally, CSS allowed the matching of elements by type, class, and/or ID. CSS2.1 added pseudo-elements,
-                pseudo-classes, and combinators. With CSS3, we can target almost any element on the page with a wide range of selectors.
-               CSS2 introduced several attribute selectors. These allow for matching elements based on their attributes. CSS3 expands upon those attribute
-               
-               selectors.Three more attribute selectors were added in CSS3; they allow for substring selection.
-               1.Matches any element E whose attribute attr starts with the value val. In other words, the val matches the beginning of the attribute value.
-               E[attr^=val]
-               eg.          a[href^='http://sales.']{color: teal;}
-               2.Matches any element E whose attribute attr ends in val. In other words, the val matches the end of the attribute value.
-               E[attr$=val]
-               eg.          a[href$='.jsp']{color: purple;}
-               3.Matches any element E whose attribute attr matches val anywhere within the attribute. It is similar to E[attr~=val], except the val can be 
-               part of a word.
-               E[attr*=val]  
-               eg.         img[src*='artwork']{
-                                   border-color: #C3B087 #FFF #FFF #C3B087;
-                                              }
-               Pseudo-classes
-               It’s likely that you’re already familiar with some of the user interaction pseudo-classes,namely :link, :visited, :hover, :active, and :focus.
-               A few more pseudo-class selectors were added in CSS3. One is the :root selector, which allows designers to point to the root element of a 
-               document. In HTML, it would be <html>. Since :root is generic, it allows a designer to select the root element of an XML document without 
-                   necessarily knowing it’s name. To permit scrollbars when needed in a document, this rule would work.
-               :root{overflow:auto;}
-               As a complement to the :first-child selector, the :last-child was added. With it one can select the last element named of a parent element.
-                For a site with articles contained in <div class=’article’></div> tags, where each has a last paragraph with some information that needs to be uniformly stylized, this rule would change the font for last paragraph of each article.
-               div.article > p:last-child{font-style: italic;}
-               A new user interaction pseudo-class selector was added, the :target selector. To draw the user’s attention to a span of text when the user 
-               clicks on a same-page link, a rule like the first line below would work nicely; the link would look like the second line, the highlighted span like the third.
-               span.notice:target{font-size: 2em; font-style: bold;}
-               <a href='#section2'>Section 2</a>
-               <p id='section2'>...</p>
-               A functional notation for selecting specified elements that fail a test has been created. The negation pseudo-class selector, :not can be 
-               coupled with almost any other selector that has been implemented. For example to put a border around images that don’t have a border 
-               specified, use a rule like this.
-               img:not([border]){border: 1;}
-               #2. CSS3 Colors
-               CSS3 brings with it support for some new ways of describing colours . Prior to CSS3, we almost always declared colours using the hexadecimal
-                format (#FFF, or #FFFFFF for white). It was also possible to declare colours using the rgb() notation, providing either integers (0–255) or
-                 percentages.
-               The color keyword list has been extended in the CSS3 color module to include 147 additional keyword colors (that are generally well supported), CSS3 also provides us with a number of other options: HSL, HSLA, and RGBA. The most notable change with these new color types is the ability to declare semitransparent colors.
-               RGBA :
-               RGBA works just like RGB, except that it adds a fourth value: alpha, the opacity level or alpha transparency level. The first three values 
-               still represent red, green, and blue. For the alpha value, 1 means fully opaque, 0 is fully transparent, and 0.5 is 50% opaque. You can use 
-               any number between 0 and 1 inclusively.
-               2. HSL and HSLA
-               HSL stands for hue, saturation, and lightness. Unlike RGB, where you need to manipulate the saturation or brightness of a color by changing 
-               all three color values in concert, with HSL you can tweak either just the saturation or the lightness while keeping the same base hue. The 
-               syntax for HSL comprises an integer value for hue, and percentage values for saturation and lightness.
-               The hsl( ) declaration accepts three values:
-               — The hue in degrees from 0 to 359. Some examples are: 0 = red, 60 = yellow, 120= green, 180 = cyan, 240 = blue, and 300 = magenta.
-               — The saturation as a percentage with 100% being the norm. Saturation of 100% will be the full hue, and saturation of 0 will give you a shade
-                of gray — essentially causing the hue value to be ignored.
-               — A percentage for lightness with 50% being the norm. A lightness of 100% will be white, 50% will be the actual hue, and 0% will be black.
-               The a in hsla( ) here also functions the same way as in rgba( )
-               3.Opacity
-               In addition to specifying transparency with HSLA and RGBA colors (and soon, eight-digit hexadecimal values), CSS3 provides us with the 
-               opacity property. opacity sets the opaqueness of the element on which it’s declared, similar to alpha.
-               Let’s look at an example:
-               div.halfopaque {
-               background-color: rgb(0, 0, 0);
-               opacity: 0.5;
-               color: #000000;
-               }
-               div.halfalpha {
-               background-color: rgba(0, 0, 0, 0.5);
-               color: #000000;
-               }
-               Though the usage of both alpha and opacity notations seem similar, when you look at it, there is a key difference in their function.
-               While opacity sets the opacity value for an element and all of its children, a semitransparent RGBA or HSLA color has no impact on the
-                element’s other CSS properties or descendants.
-               #3. Rounded Corners: border-radius
-               The border-radius property lets you create rounded corners without the need for images or additional markup. To add rounded corners to our
-                box, we simply add
-               border-radius: 25px;
-               The border-radius property is actually a shorthand. For our “a” element, the corners are all the same size and symmetrical. If we had wanted
-                different-sized corners, we could declare up to four unique values
-               border-radius: 5px 10px 15px 20px;
-               #4. Drop Shadows
-               CSS3 provides the ability to add drop shadows to elements using the box-shadow property. This property lets you specify the color, height, 
-               width, blur, and offset of one or multiple inner and/or outer drop shadows on your elements.
-               box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
-               #5. Text Shadow
-               text-shadow adds shadows to individual characters in text nodes. Prior to CSS 3, this would be done by either using an image or duplicating
-                a text element and then positioning it.
-               text-shadow: topOffset leftOffset blurRadius color;
-               #6. Linear Gradients
-               W3C added the syntax for generating linear gradients with CSS3.
-               Syntax: background: linear-gradient(direction, color-stop1, color-stop2, ...);
-               e.g.   #grad {
-                 background: linear-gradient(to right, red , yellow);
-               }
-               
-               Linear Gradient — Left to Right
-               You can even specify direction in degrees e.g. 60deg instead of to right in the above example .
-               #7. Radial Gradients
-               Radial gradients are circular or elliptical gradients. Rather than proceeding along a straight axis, colors blend out from a starting point
-                in all directions.
-               Syntax : background: radial-gradient(shape size at position, start-color, ..., last-color);
-               e.g.     #grad {
-                 background: radial-gradient(red, yellow, green);
-               }//Default       
-                        #grad {
-                 background: radial-gradient(circle, red, yellow, green);
-               }//Circle
-               
-               output comparison
-               #8.Multiple Background Images
-               In CSS3, there’s no need to include an element for every background image; it provides us with the ability to add more than one background 
-               image to any element, even to pseudo-elements.
-               background-image:
-               url(firstImage.jpg),
-               url(secondImage.gif),
-               url(thirdImage.png);
-               These are the implemented CSS3 features that are new, there are other unimplemented features too , we’ll discuss them once they’re 
-               implemented
-               Hope you liked the mini tutorial.
-                </p>
-            </article>
-            <p class="date">march,21,2020 8:00 pm</p>
-            </section>
+        
             <!-- third post -->
-            <section>
-                <p class="title">Third post</p>
+            <section class="question">
+                <p class="title">Default browsers width </p>
                 <article>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque iste, optio excepturi sit omnis aperiam esse
-                         quia libero. Officia expedita dolor consequuntur totam velit doloribus fuga nisi eveniet obcaecati non?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque iste, optio excepturi sit omnis aperiam esse
-                         quia libero. Officia expedita dolor consequuntur totam velit doloribus fuga nisi eveniet obcaecati non?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque iste, optio excepturi sit omnis aperiam esse
-                         quia libero. Officia expedita dolor consequuntur totam velit doloribus fuga nisi eveniet obcaecati non?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque iste, optio excepturi sit omnis aperiam esse
-                         quia libero. Officia expedita dolor consequuntur totam velit doloribus fuga nisi eveniet obcaecati non?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque iste, optio excepturi sit omnis aperiam esse
-                         quia libero. Officia expedita dolor consequuntur totam velit doloribus fuga nisi eveniet obcaecati non?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque iste, optio excepturi sit omnis aperiam esse
-                         quia libero. Officia expedita dolor consequuntur totam velit doloribus fuga nisi eveniet obcaecati non?
+                        The broser interprate this by overriding the default font size of the browser .Setting the font size in pixel values is a good choice when you need pixel accuracy. A px value is static. 
+                        This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly
+                        the number of pixels in height that is specified. The results may vary slightly across browsers, as they may use different 
+                        algorithms to achieve a similar effect.
+                        Font sizing settings can also be used in combination. For example, if a parent element is set to 16px and its child element is set to 200px,
+                        the child element displays larger than the parent element in the page.
                     </p>
                 </article>
-                <p class="date">march,22,2020 8:00 pm</p>
+                <p class="date">march,18,2020 5:27 pm</p>
                 </section>
-    </dir>
+                <section class="question">
+                    <p class="title">New features in Css3</p>
+                    <article id="css">
+                        <p>CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. 
+                        It brings a lot of new features  like rounded corners,
+                        shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.</p>
+                    <h2>CSS3 Selectors</h2>
+                       Selectors are at the heart of CSS. Originally, CSS allowed the matching of elements by type, class, and/or ID. CSS2.1
+                        added pseudo-elements,pseudo-classes, and combinators. With CSS3, we can target almost any element on the page with a wide range of 
+                        selectors.
+                       CSS2 introduced several attribute selectors. These allow for matching elements based on their attributes. 
+                       CSS3 expands upon those attribute selectors.Three more attribute selectors were added in CSS3; they allow for substring selection.
+                       1.Matches any element E whose attribute attr starts with the value val. In other words, the val matches the beginning of the attribute value.
+                       2.Matches any element E whose attribute attr ends in val. In other words, the val matches the end of the attribute value.
+                       3.Matches any element E whose attribute attr matches val anywhere within the attribute. 
+
+                       <h2>Pseudo-classes</h2>
+                       It’s likely that you’re already familiar with some of the user interaction pseudo-classes,namely :link, :visited, :hover, :active, and :focus.
+                       A few more pseudo-class selectors were added in CSS3. One is the :root selector, which allows designers to point to the root element of a 
+                       document. In HTML, it would be . Since :root is generic, it allows a designer to select the root element of an XML document without 
+                        necessarily knowing it’s name. To permit scrollbars when needed in a document, this rule would work.
+                       As a complement to the :first-child selector, the :last-child was added. With it one can select the last element named of a parent element.
+
+                       A new user interaction pseudo-class selector was added, the :target selector. To draw the user’s attention to a span of text when the user 
+                       clicks on a same-page link, a rule like the first line below would work nicely; the link would look like the second line, the highlighted span like the third.
+        
+                       A functional notation for selecting specified elements that fail a test has been created. The negation pseudo-class selector, :not can be 
+                       coupled with almost any other selector that has been implemented. For example to put a border around images that don’t have a border 
+            
+                       <h2>CSS3 Colors</h2>
+                       CSS3 brings with it support for some new ways of describing colours . Prior to CSS3, we almost always declared colours using the hexadecimal
+                        format (#FFF, or #FFFFFF for white). It was also possible to declare colours using the rgb() notation, providing either integers (0–255) or
+                         percentages.
+                       The color keyword list has been extended in the CSS3 color module to include 147 additional keyword colors (that are generally well supported), CSS3 also provides us with a number of other options: HSL, HSLA, and RGBA. The most notable change with these new color types is the ability to declare semitransparent colors.
+                       <h3>RGBA </h3>
+                       RGBA works just like RGB, except that it adds a fourth value: alpha, the opacity level or alpha transparency level. The first three values 
+                       still represent red, green, and blue. For the alpha value, 1 means fully opaque, 0 is fully transparent, and 0.5 is 50% opaque. You can use 
+                       any number between 0 and 1 inclusively.
+                        <h3>HSL and HSLA</h3>
+                       HSL stands for hue, saturation, and lightness. Unlike RGB, where you need to manipulate the saturation or brightness of a color by changing 
+                       all three color values in concert, with HSL you can tweak either just the saturation or the lightness while keeping the same base hue. The 
+                       syntax for HSL comprises an integer value for hue, and percentage values for saturation and lightness.
+                       The hsl( ) declaration accepts three values:
+                       The hue in degrees from 0 to 359. Some examples are: 0 = red, 60 = yellow, 120= green, 180 = cyan, 240 = blue, and 300 = magenta.
+                       The saturation as a percentage with 100% being the norm. Saturation of 100% will be the full hue, and saturation of 0 will give you a shade
+                        of gray — essentially causing the hue value to be ignored.
+                       A percentage for lightness with 50% being the norm. A lightness of 100% will be white, 50% will be the actual hue, and 0% will be black.
+                       The a in hsla( ) here also functions the same way as in rgba( ).</p>
+                       <h2>Opacity</h2>
+                       <p>In addition to specifying transparency with HSLA and RGBA colors (and soon, eight-digit hexadecimal values), CSS3 provides us with the 
+                       opacity property. opacity sets the opaqueness of the element on which it’s declared, similar to alpha.
+                       Though the usage of both alpha and opacity notations seem similar, when you look at it, there is a key difference in their function.
+                       While opacity sets the opacity value for an element and all of its children, a semitransparent RGBA or HSLA color has no impact on the
+                        element’s other CSS properties or descendants.</p>
+
+                       <h2>Rounded Corners: border-radius</h2>
+                       <p>The border-radius property lets you create rounded corners without the need for images or additional markup. To add rounded corners to our
+                        box, we simply add The border-radius property is actually a shorthand. For our “a” element, the corners are all the same size and symmetrical. If we had wanted
+                        different-sized corners, we could declare up to four unique values.</p>
+
+                       <h2>Drop Shadows</h2>
+                       <p>CSS3 provides the ability to add drop shadows to elements using the box-shadow property. This property lets you specify the color, height, 
+                       width, blur, and offset of one or multiple inner and/or outer drop shadows on your elements.</p>
+
+                        <h2>Text Shadow</h2>
+                        <p>Text-shadow adds shadows to individual characters in text nodes. Prior to CSS 3, this would be done by either using an image or duplicating
+                        a text element and then positioning it.</p>
+
+                       <h2>Radial Gradients</h2>
+                       <p>Radial gradients are circular or elliptical gradients. Rather than proceeding along a straight axis, colors blend out from a starting point
+                        in all directions.</p>
+                      
+                       <h2>Multiple Background Images</h2>
+                      <p>In CSS3, there’s no need to include an element for every background image; it provides us with the ability to add more than one background 
+                       image to any element, even to pseudo-elements.</p>
+                        
+                    </article>
+                    <p class="date">march,19,2020 8:49 am</p>
+                    </section>
     
 </body>
 </html>

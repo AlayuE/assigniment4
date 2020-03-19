@@ -32,6 +32,32 @@ body{
     color: white;
     font-size: 17px;
     text-transform: uppercase;
+
+}
+.input{
+    width: 40%;
+    margin: 8px 0;
+    padding: 10px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.submit{
+    width: 10%;
+    margin: 8px 0;
+    padding: 10px 10px;
+    border: 2px solid black;
+    border-radius: 10px; 
+}
+textarea {
+    width: 40%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
 }
 
 #image{
@@ -89,20 +115,6 @@ body{
 }
 
 /* blogs */
-/* *{
-    padding: 0px;
-    margin: 0px;
-}
-body{
-    background-color: skyblue;
-    border-style: solid 10px lightgray;
-    margin: 10px;
-}
-header{
-    background-color: rgba(119, 90,90, 1);
-    position:fixed;
-    width: 100%;
-
 }
 section{
     /* border: solid 1px; */
@@ -113,30 +125,31 @@ section{
 }
 article{
     line-height: 25px;
-    font-size: 15px;
+    font-size: 18px;
     text-align: justify;
 }
-/* changing the nature block or inline */ 
-nav > ul > li{
-    display: inline-block;
-    padding: 10px 3px;
+ 
+.question{
+    border: 1px solid black;
+    margin: 100px;
+    padding: 60px;
+}
+.question h2,h1,h3{
+    margin : 20px;
     font-size: 20px;
 }
-nav > ul > li> a{
-    text-decoration: none;
-}
-nav > ul > li:hover{
-background-color: seagreen;
-height: 60px;
-}
 .title{
-    font-size: 23px;
+    font-size: 25px;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 60px;
+    margin-bottom: 25px;
 }
 .date{
     text-transform: capitalize;
     font-style: italic;
-    font-size: 15px;
+    font-size: 20px;
+    margin-top: 10px;
 }
 img{
     width: 400px;
@@ -144,7 +157,8 @@ img{
     float: left;
 }
 #clear{
-    clear: left; */
+    clear: left;
+
 }
 #gallary{
     border-top: 20px solid black;
@@ -170,15 +184,21 @@ h1{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
+div > ul >li a:link, a:visited{
+        background-color: #f44336;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;	
+        text-decoration: none;
+        display: inline-block;
+        margin: 20px;  
+}
+div > ul >li a:hover, a:active {
+        background-color: red;
+}
 
 /* tic toc toe */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .container {
+  .outside {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -186,50 +206,44 @@ h1{
     justify-content: center;
     background: #eee;
   }
-  .play-area {
+  .inside {
     display: grid;
-    width: 300px;
-    height: 300px;
+    width: 900px;
+    height: 900px;
     grid-template-columns: auto auto auto;
   }
-  .block {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
+  .tictac {
+    width: 300px;
+    height: 300px;
     font-size: 3rem;
     font-weight: bold;
     border: 3px solid black;
-    transition: background 0.2s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
   
-  .block:hover {
-    cursor: pointer;
-    background: #0ff30f;
-  }
-  
-  #block_0,
-#block_1,
-#block_2 {
+#tictop1,
+#tictop2,
+#tictop3 {
   border-top: none;
 }
 
-#block_0,
-#block_3,
-#block_6 {
+#tictop1,
+#ticmiddle1,
+#ticbottom1 {
   border-left: none;
 }
 
-#block_6,
-#block_7,
-#block_8 {
+#ticbottom1,
+#ticbottom2,
+#ticbottom3 {
   border-bottom: none;
 }
 
-#block_2,
-#block_5,
-#block_8 {
+#tictop3,
+#ticmiddle3,
+#ticbottom3 {
   border-right: none;
 }
 #flags{
@@ -926,3 +940,4 @@ h1{
         border-bottom: 150px solid transparent;
         float: left;
       }
+      
