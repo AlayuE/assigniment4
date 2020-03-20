@@ -1,7 +1,6 @@
 *{
 padding: 0;
 margin: 0;
-list-style: none;
 text-decoration: none;
 box-sizing: border-box;
 }
@@ -11,26 +10,27 @@ body{
     background: gray;
 }
 
-#nav{
+nav{
     background: black;
     height: 60px;
     width: 100%;
     margin-top: 2px;
     margin-bottom: 20px;
+    display: flex;
 }
-#nav > ul{
+nav > ul{
     float: left;
     margin-right: 20px;
 }
 
-#nav > ul >li{
+nav > ul >li{
     display: inline-block;
     line-height: 60px;
     margin: 0 5px;
     padding-top: 5px;
 
 }
-#nav > ul > li > a{
+nav > ul > li > a{
     color: white;
     font-size: 17px;
     text-transform: uppercase;
@@ -60,9 +60,17 @@ body{
 #phone{
     margin-right:5px ;   
 }
-.submit{
+.submit1{
     width: 10%;
-    margin: 8px 0;
+    margin: 8px 100px;
+    padding: 10px 10px;
+    border: 2px solid black;
+    border-radius: 10px; 
+    cursor: pointer;
+}
+.submit2{
+    width: 10%;
+    margin: 8px 0px;
     padding: 10px 10px;
     border: 2px solid black;
     border-radius: 10px; 
@@ -85,6 +93,8 @@ textarea {
     width: 300px;
     border-radius: 100%;
     float: left;
+    max-width: 100%;
+    height: auto;
 }
 #name{
     height: 400px;
@@ -93,7 +103,12 @@ textarea {
     padding: 20px;
     border-bottom: 2px solid black;
 }
-
+#alaman{
+    margin: 20px;
+    padding: 20px;
+    list-style: square;
+    border-bottom: 2px solid black;
+}
 
 #discription{
     padding: 100px;
@@ -102,7 +117,8 @@ textarea {
 #work{
     margin: 20px;
     width: 100%;
-    height: 100px;  
+    height: 150px; 
+    border-bottom: 2px solid black; 
 }
 #workleft{
     width: 50%;
@@ -127,6 +143,22 @@ textarea {
 }
 
 /* contact */
+#facebook{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 600px;
+}
+#telegram{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+#instagram{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
 .form{
     margin-left: 20px;
 }
@@ -214,6 +246,11 @@ div > ul >li a:hover, a:active {
 }
 
 /* tic toc toe */
+#lalala{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
   .outside {
     min-height: 100vh;
     display: flex;
@@ -920,159 +957,26 @@ transform: rotateZ(-70deg);
         border-bottom: 150px solid transparent;
         float: left;
       }
+      #myname{
+          font-size: 40px;
+      }
+      #mynamee{
+          font-size: 30px;
+          font-family: 'Times New Roman', Times, serif;
+      }
 
 /* media queries */
-@media screen and (max-width: 800px) and (min-width: 300) {
+@media screen and (max-width: 900px) {
     *{
         padding: 0;
         margin: 0;
-        list-style: none;
         text-decoration: none;
         box-sizing: border-box;
         }
         
         body{
             font-family: 'Times New Roman', Times, serif;
-            background: gray;
-        }
-        #nav{
-            background: black;
-            height: 60px;
-            width: 100%;
-            margin-top: 2px;
-            margin-bottom: 20px;
-        }
-        #nav > ul{
-            float: left;
-            margin-right: 20px;
-        }
-        
-        #nav > ul >li{
-            display: inline-block;
-            line-height: 60px;
-            margin: 0 5px;
-            padding-top: 5px;
-        
-        }
-        #nav > ul > li > a{
-            color: white;
-            font-size: 17px;
-            text-transform: uppercase;
-        
-        }
-        
-        .input{
-            width: 40%;
-            margin: 8px 0;
-            padding: 10px 10px;
-            border: 2px solid black;
-            border-radius: 10px;
-        }
-        #fname{
-            margin-right: 31px;
-        }
-        #lname{
-            margin-right: 31px; 
-        }
-        #pass{
-            margin-right:35px ;   
-        }
-        #email{
-            margin-right:60px ;   
-        }
-        #phone{
-            margin-right:5px ;   
-        }
-        .submit{
-            width: 10%;
-            margin: 8px 0;
-            padding: 10px 10px;
-            border: 2px solid black;
-            border-radius: 10px; 
-        }
-        textarea {
-            width: 40%;
-            height: 150px;
-            padding: 12px 20px;
-            box-sizing: border-box;
-            border: 2px solid black;
-            border-radius: 20px;
-            background-color: #f8f8f8;
-            font-size: 16px;
-            resize: none;
-        }
-        
-        #image{
-            height: 300px;
-            width: 300px;
-            border-radius: 100%;
-            float: left;
-        }
-        #name{
-            height: 400px;
-            width: 100%;
-            margin: 20px;
-            padding: 20px;
-            border-bottom: 2px solid black;
-        }
-       div> ul li{
-           margin: 40px;
-       }
-        #list1 li{
-            margin: 20px;
-            padding: 20px;
-            border: greenyellow;
-        }
-        
-        #discription{
-            padding: 100px;
-            margin-left: 300px;
-        }
-        #work{
-            margin: 20px;
-        }
-        #workleft{
-            margin: 20px;
-            width: 100%;
-            height: 100px;
-            float: left;
-        }
-        #workright{
-            margin: 20px;
-            width: 100%;
-            height: 100px;
-            float: left;
-        }
-        }
-        #skills{
-            margin: 20px;
-            width: 100%;
-            height: 100px;
-        }
-        #skillstopic{
-            width: 50%;
-            float: left;
-        }
-        #skillsstar{
-            width: 50%;
-            float: left;
-        }
-
-   
-}
-
-@media only screen and (mn-width: 200px) {
-    *{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        text-decoration: none;
-        box-sizing: border-box;
-        }
-        
-        body{
-            font-family: 'Times New Roman', Times, serif;
-            background: gray;
+            background: white;
         }
         
         #nav{
@@ -1145,7 +1049,7 @@ transform: rotateZ(-70deg);
         }
         
         #image{
-            height: 1500px;
+            height: 150px;
             width: 150px;
             border-radius: 100%;
             float: left;
@@ -1195,138 +1099,103 @@ transform: rotateZ(-70deg);
 }
 .mapouter{
     float: right;
-    margin-right: 20px;
+    margin-right:40px;
 }
 
-/* blogs */
-}
-section{
-    /* border: solid 1px; */
-    padding: 3px 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-
-}
-article{
-    line-height: 15px;
-    font-size: 12px;
-    text-align: justify;
-}
- 
-.question{
-    border: 1px solid black;
-    margin: 50px;
-    padding: 30px;
-}
-.question h2,h1,h3{
-    margin : 10px;
-    font-size: 10px;
-}
-.title{
-    font-size: 15px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 30px;
-    margin-bottom: 15px;
-}
-.date{
-    text-transform: capitalize;
-    font-style: italic;
-    font-size: 10px;
-    margin-top: 5px;
-}
-img{
-    width: 200px;
-    height: 200px;
-    float: left;
-    height: 250px; 
-    width: 30%;
-    margin: 1.66%;
-}
-#gallary{
-    border-top: 10px solid black;
-    font-size: 10px;
-    font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    width: 1rem;
-    padding-bottom: 10px;
-    border-style: solid 10px;
-    position:relative;
-    text-align: center;
-    display: inline;
-
-}
-
-.heading{
-    margin-left: 20px;
-    font-size: 40px;
-}
-div > ul >li a:link, a:visited{
-        background-color:#f44336;
-        color: white;
-        padding: 7px 15px;
-        text-align: center;	
-        text-decoration: none;
-        display: inline-block;
-        margin: 10px;  
-        border-radius: 10px;
-}
-div > ul >li a:hover, a:active {
-        background-color: red;
-}
-
-/* tic toc toe */
-  .outside {
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-  }
-  .inside {
-    display: grid;
-    width: 450px;
-    height: 450px;
-    grid-template-columns: auto auto auto;
-  }
-  .tictac {
-    width: 150px;
-    height: 150px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: 1.5px solid black;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
   
-#tictop1,
-#tictop2,
-#tictop3 {
-  border-top: none;
-}
-
-#tictop1,
-#ticmiddle1,
-#ticbottom1 {
-  border-left: none;
-}
-
-#ticbottom1,
-#ticbottom2,
-#ticbottom3 {
-  border-bottom: none;
-}
-
-#tictop3,
-#ticmiddle3,
-#ticbottom3 {
-  border-right: none;
-}
+        img{
+            width: 200px;
+            height: 200px;
+            float: left;
+            height: 250px; 
+            width: 30%;
+            margin: 1.66%;
+        }
+        #gallary{
+            border-top: 10px solid black;
+            font-size: 10px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            width: 1rem;
+            padding-bottom: 10px;
+            border-style: solid 10px;
+            position:relative;
+            text-align: center;
+            display: inline;
         
-  }
+        }
+        
+        .heading{
+            margin-left: 20px;
+            font-size: 40px;
+        }
+        div > ul >li a:link, a:visited{
+                background-color:#f44336;
+                color: white;
+                padding: 7px 15px;
+                text-align: center;	
+                text-decoration: none;
+                display: inline-block;
+                margin: 10px;  
+                border-radius: 10px;
+        }
+        div > ul >li a:hover, a:active {
+                background-color: red;
+        }
+        
+        /* tic toc toe */
+          .outside {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #eee;
+          }
+          .inside {
+            display: grid;
+            width: 450px;
+            height: 450px;
+            grid-template-columns: auto auto auto;
+          }
+          .tictac {
+            width: 150px;
+            height: 150px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: 1.5px solid black;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+          }
+          
+        #tictop1,
+        #tictop2,
+        #tictop3 {
+          border-top: none;
+        }
+        
+        #tictop1,
+        #ticmiddle1,
+        #ticbottom1 {
+          border-left: none;
+        }
+        
+        #ticbottom1,
+        #ticbottom2,
+        #ticbottom3 {
+          border-bottom: none;
+        }
+        
+        #tictop3,
+        #ticmiddle3,
+        #ticbottom3 {
+          border-right: none;
+        }
+   
+}
+
 
 
 
